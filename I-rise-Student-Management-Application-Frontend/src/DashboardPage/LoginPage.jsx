@@ -1,14 +1,38 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import NavBar from "./NavBar";
+import axios from "axios";
+
+import { Navigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = (e) => {
-    e.preventDefault();
-    console.log("Logging in with:", email, password);
-  };
+  e.preventDefault();
+  
+  console.log("Logging in with:", email, password);
+  const navigate = Navigate()
+
+ axios
+    .post("http://localhost:8080/admin/v1/loginAdmin", {email, password })
+    .then((response) => {
+      console.log("Login Success:", response.data);
+
+       if(response.status === 200){
+
+        navigate('/home')
+
+        console.log("succssfull");}
+    })
+    .catch((error) => {
+      console.error("Login Failed:", error);
+    });
+
+   
+
+};
+
 
   return (
     <>
@@ -21,11 +45,11 @@ const LoginPage = () => {
           <h2 className="text-2xl font-semibold mb-6 text-center">Login</h2>
           <div className="mb-4">
             <label className="block text-gray-700">Role</label>
-            <div className="w-full">
-                <select name="cars" id="cars">
-              <option value="volvo">Admin</option>
-              <option value="saab">Staff</option>
-              <option value="mercedes">Student</option>
+            <div className="">
+                <select name="role" id="role">
+              <option value="admin">Admin</option>
+              <option value="staff">Staff</option>
+              <option value="student">Student</option>
             </select>
             </div>
          

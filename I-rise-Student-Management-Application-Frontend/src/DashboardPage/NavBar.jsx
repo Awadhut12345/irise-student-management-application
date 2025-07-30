@@ -1,5 +1,6 @@
 import React, {useState}from "react";
 import LoginPage from "./LoginPage";
+import { AdminDashboard } from "../Component/Admin/AdminDashboard";
 const NavBar =()=>{
 
    const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,7 @@ const NavBar =()=>{
           <li><a href="#" className="hover:text-gray-300">Trending Courses</a></li>
           <li><a href="#" className="hover:text-gray-300">Courses</a></li>
           <li><a href="#" className="hover:text-gray-300">Free Demo</a></li>
-          <li><a href="#" className="hover:text-gray-300">Services</a></li>
+          <li><a href="/AdminDashboard" className="hover:text-gray-300">Services</a></li>
           <li><a href="/loginpage" className="hover:text-gray-300">Login</a></li>
           
         </ul>
