@@ -47,12 +47,18 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
          <!-- my sql connector -->
-        <dependency>
+<!--        <dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
 			<version>8.3.0</version>
 
-		</dependency>
+		</dependency>-->
+                
+         <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.3</version>
+        </dependency>
         
         <!-- Spring Boot Actuator -->
         <dependency>
@@ -107,10 +113,16 @@
 			<artifactId>jakarta.validation-api</artifactId>
 		</dependency>
 
-		<dependency>
+<!--		<dependency>
 			<groupId>org.hibernate.validator</groupId>
 			<artifactId>hibernate-validator</artifactId>
-		</dependency>
+		</dependency>-->
+        <dependency>
+            <groupId>com.interior</groupId>
+            <artifactId>interior-backend</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
 
     <build>
