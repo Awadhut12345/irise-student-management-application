@@ -25,7 +25,6 @@ public class StaffEntity {
 	private int id;
 
 	@Column(name = "fullName", nullable = false, length = 50)
-	@Pattern(regexp = "^[A-Za-z ]+$", message = "Name can only contain letters and spaces")
 	private String fullName;
 
 	@NotNull
@@ -34,9 +33,7 @@ public class StaffEntity {
 	@NotNull
 	private Long pinCode;
 
-	@Column(length =10,nullable = false)
 	@NotBlank(message = "Mobile number is required")
-	@Pattern(regexp = "^[6-9]\\d{9}$", message = "Mobile number must be 10 digits and start with 6-9")
 	private String mobileNO;
 
 	@Email(message = "Invalid email format")
@@ -136,9 +133,10 @@ public class StaffEntity {
 	}
 	public StaffEntity() {
 		super();
-
+		
 	}
-
+	
+	
 
 
 }
