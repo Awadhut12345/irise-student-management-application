@@ -1,46 +1,28 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-
-=======
 import React, {useState}from "react";
 import LoginPage from "./LoginPage";
 import { AdminDashboard } from "../Component/Admin/AdminDashboard";
->>>>>>> main
 const NavBar =()=>{
 
    const [isOpen, setIsOpen] = useState(false);
 
   return(
-<<<<<<< HEAD
-     <nav className="bg-blue-600 text-white shadow-md">
-=======
      
   
 
      <nav className=" max-w-7xl bg-blue-600 text-white shadow-md">
->>>>>>> main
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold">I-Rise</div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6">
-<<<<<<< HEAD
-          <li><a href="#" className="hover:text-gray-300">Home</a></li>
-=======
           <li><a href="/" className="hover:text-gray-300">Home</a></li>
->>>>>>> main
            <li><a href="#" className="hover:text-gray-300">Contact</a></li>
           <li><a href="#" className="hover:text-gray-300">Trending Courses</a></li>
           <li><a href="#" className="hover:text-gray-300">Courses</a></li>
           <li><a href="#" className="hover:text-gray-300">Free Demo</a></li>
-<<<<<<< HEAD
-          <li><a href="#" className="hover:text-gray-300">Services</a></li>
-          <li><a href="#" className="hover:text-gray-300">Login</a></li>
-=======
           <li><a href="/AdminDashboard" className="hover:text-gray-300">Services</a></li>
           <li><a href="/loginpage" className="hover:text-gray-300">Login</a></li>
->>>>>>> main
           
         </ul>
 
@@ -78,12 +60,6 @@ const NavBar =()=>{
       {isOpen && (
         <div className="md:hidden px-4 pb-4">
           <ul className="space-y-2">
-<<<<<<< HEAD
-            <li><a href="#" className="block py-2 hover:bg-blue-700 rounded">Home</a></li>
-            <li><a href="#" className="block py-2 hover:bg-blue-700 rounded">About</a></li>
-            <li><a href="#" className="block py-2 hover:bg-blue-700 rounded">Services</a></li>
-            <li><a href="#" className="block py-2 hover:bg-blue-700 rounded">Contact</a></li>
-=======
              <li><a href="/" className="hover:text-gray-300">Home</a></li>
            <li><a href="#" className="hover:text-gray-300">Contact</a></li>
           <li><a href="#" className="hover:text-gray-300">Trending Courses</a></li>
@@ -91,21 +67,13 @@ const NavBar =()=>{
           <li><a href="#" className="hover:text-gray-300">Free Demo</a></li>
           <li><a href="#" className="hover:text-gray-300">Services</a></li>
           <li><a href="/loginpage" className="hover:text-gray-300">Login</a></li>
->>>>>>> main
           </ul>
         </div>
       )}
     </nav>
-<<<<<<< HEAD
-=======
  
->>>>>>> main
 
   )
 }
 
-<<<<<<< HEAD
 export default NavBar;
-=======
-export default NavBar;
->>>>>>> main

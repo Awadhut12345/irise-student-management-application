@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.in.irise.Entity.AdminEntity;
 import com.in.irise.Service.AdminService;
+
 import com.in.irise.Util.EmailUtil;
 
 import jakarta.mail.MessagingException;
@@ -30,7 +31,7 @@ import jakarta.validation.Valid;
 @RequestMapping("/admin/v1")
 public class AdminController {
 	
-	@Autowired
+	
 	private AdminService adminService;
 	
 	@Autowired
