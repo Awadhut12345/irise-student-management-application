@@ -1,21 +1,26 @@
 import React, {  useState } from "react";
 import NavBar from "./NavBar";
-import axios from "axios";
+import axiosInstance from "../Service/AxiosInstance";
 
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+    const navigate = useNavigate()
 
   const handleLogin = (e) => {
   e.preventDefault();
   
   console.log("Logging in with:", email, password);
-  const navigate = Navigate()
 
- axios
-    .post("http://localhost:8080/admin/v1/loginAdmin", {email, password })
+
+axiosInstance
+    .post("/admin/v1/loginAdmin", 
+      {
+       email,
+       password 
+      })
     .then((response) => {
       console.log("Login Success:", response.data);
 
@@ -28,8 +33,6 @@ const LoginPage = () => {
     .catch((error) => {
       console.error("Login Failed:", error);
     });
-
-   
 
 };
 
@@ -45,7 +48,7 @@ const LoginPage = () => {
           <h2 className="text-2xl font-semibold mb-6 text-center">Login</h2>
           <div className="mb-4">
             <label className="block text-gray-700">Role</label>
-            <div className="">
+            <div className="w-full p-2 border border-gray-300 rounded mt-2">
                 <select name="role" id="role">
               <option value="admin">Admin</option>
               <option value="staff">Staff</option>
@@ -78,8 +81,8 @@ const LoginPage = () => {
           >
             Login
           </button>
-
-        <h1>register </h1>
+         <h1><a href="/adminRegister">Register here</a></h1>
+      
         </form>
 
 
