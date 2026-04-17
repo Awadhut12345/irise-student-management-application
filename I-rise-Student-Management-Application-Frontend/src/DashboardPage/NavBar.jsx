@@ -9,8 +9,8 @@ const NavBar =()=>{
      
   
 
-     <nav className=" max-w-7xl bg-blue-600 text-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+     <nav className=" bg-blue-600 text-white shadow-md">
+      <div className="mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold">I-Rise</div>
 

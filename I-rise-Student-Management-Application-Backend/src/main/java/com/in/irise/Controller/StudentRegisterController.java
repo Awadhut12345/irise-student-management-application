@@ -14,7 +14,7 @@ import com.in.irise.util.PasswordGenerator;
 @RestController
 @RequestMapping("/backend/student")
 public class StudentRegisterController {
-	
+	//nandkishor
 	@Autowired
 	private StudentRegisterService studentService;
 	
@@ -25,4 +25,5 @@ public class StudentRegisterController {
 		
 		return ResponseEntity.ok("Student register successfully " + savedStudent);
 	}
+    //dev
 }
