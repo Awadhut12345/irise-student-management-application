@@ -42,7 +42,7 @@ public class AdminController {
 	{
 		return "Welcome to Irise Student Management";
 	}
-	
+	//nandu
 	 @PostMapping("/registerAdmin")
 	 public ResponseEntity<HashMap<String, Object>> registerAdmin(@Valid @RequestBody AdminEntity admin) 
 	 {
